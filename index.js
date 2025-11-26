@@ -46,7 +46,7 @@ app.get("/teachers", async (req, res) => {
         res.json(rows);
     } catch (err) {
         console.error("Error fetching teachers:", err);
-        res.status(500).json({ error: "Failed to fetch teachers" });
+        res.status(500).json({ error: "Failed to fetch teachers" + err });
     }
 });
 
